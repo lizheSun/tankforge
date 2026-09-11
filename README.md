@@ -12,6 +12,8 @@
 
 [核心特性](#-核心特性) · [快速开始](#-快速开始) · [玩法](#-玩法与界面) · [RL 训练](#-rl-训练三种方式练出一个会打仗的神经网络) · [项目结构](#-项目结构) · [文档](#-文档索引)
 
+![TANKFORGE 战斗画面](docs/screenshots/battle.png)
+
 </div>
 
 ---
@@ -86,6 +88,10 @@ npm run preview      # 本地预览产物
 | ⚙ **系统管理** | MySQL 数据源配置、数据浏览、只读 SQL 控制台 |
 | 📖 **游戏规则** | 完整规则手册：引擎机制 + 赛事规则 + **RL 训练完全攻略** |
 
+![本地布阵](docs/screenshots/setup.png)
+
+<sub>本地布阵：双方各挂策略（内置 AI / 自定义代码 / RL 模型），配好 Build 一键开战</sub>
+
 ### 坦克大脑长什么样
 
 一段完整的策略就这么多——引擎每 5 个物理 tick（约 83ms）调用一次 `decide(ctx)`，你返回意图数组：
@@ -114,6 +120,10 @@ function decide(ctx) {
 
 > 观测里能看到：自身 HP/冷却/朝向、最近可见敌的位置/速度/HP/夹角、剩余时间、通信收件箱、地图信息等。
 > 完整契约见 [`docs/BATTLE_SPEC.md`](docs/BATTLE_SPEC.md)。
+
+![在线编写策略](docs/screenshots/code.png)
+
+<sub>在线编辑器：直接写 decide(ctx)，输入即诊断，存好就能参战</sub>
 
 ### 赛事系统怎么玩
 
@@ -153,6 +163,10 @@ python3 scripts/rl/export_sb3.py tank-ppo.zip -o my-tank.json
 ```
 
 训练完：**坦克工坊 → 🧠 模型策略（RL）→ 上传 `my-tank.json` → 创建坦克参战**。
+
+![坦克工坊](docs/screenshots/workshop.png)
+
+<sub>坦克工坊：12 点能力 Build 预算 + 实时雷达图 + 大脑（JS / RL 模型）挂载</sub>
 
 > 从奖励设计到自定义训练管道（改奖励塑形、换陪练池、调网络结构、甚至接入自己的算法），
 > 详见游戏内「📖 游戏规则 → RL 模型训练完全攻略」，或直接看 [`scripts/rl/`](scripts/rl/)。
@@ -206,7 +220,8 @@ tankforge/
 │   ├── stress.ts          # 压力 / 平衡测试
 │   └── replaycheck.ts     # 回放确定性校验
 ├── docs/
-│   └── BATTLE_SPEC.md     # 战斗系统技术规格（引擎契约）
+│   ├── BATTLE_SPEC.md     # 战斗系统技术规格（引擎契约）
+│   └── screenshots/       # README 截图（npm run shots 重新生成）
 ├── REQUIREMENTS.md        # 产品需求文档
 └── CONTRIBUTING.md        # 贡献指南
 ```
@@ -224,6 +239,7 @@ tankforge/
 | `npm run m3` | 团战场景测试 |
 | `npm run replay:check` | 回放确定性校验 |
 | `npm run evolve [代数] [种群] [输出]` | 进化训练（默认 30 代 × 12 只） |
+| `npm run shots` | 重新生成 README 截图（需先启动 `npm run dev`） |
 
 ## 📚 文档索引
 

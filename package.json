@@ -37,6 +37,7 @@
     "m1:strict": "tsx scripts/stress.ts 100 strict",
     "replay:check": "tsx scripts/replaycheck.ts",
     "m3": "tsx scripts/team.ts",
+    "shots": "node scripts/screenshots.mjs",
     "server": "tsx watch server/index.ts",
     "start": "tsx server/index.ts",
     "evolve": "tsx scripts/rl/evolve.ts",
@@ -61,6 +62,7 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
+    "playwright-core": "^1.63.0",
     "tsx": "^4.23.13",
     "typescript": "^5.6.3",
     "vite": "^6.0.3"
