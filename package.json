@@ -1,0 +1,68 @@
+{
+  "name": "tankforge",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "可编程坦克对战平台：写 JS 策略或训练 RL 模型，在确定性引擎里单挑、组队团战、打天梯赛与吃鸡赛",
+  "license": "MIT",
+  "author": "sunleone",
+  "keywords": [
+    "tank",
+    "game-engine",
+    "reinforcement-learning",
+    "ppo",
+    "self-play",
+    "deterministic-simulation",
+    "typescript",
+    "react"
+  ],
+  "homepage": "https://github.com/sunleone/tankforge#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunleone/tankforge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sunleone/tankforge/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "smoke": "tsx scripts/headless.ts",
+    "m1": "tsx scripts/stress.ts",
+    "m1:strict": "tsx scripts/stress.ts 100 strict",
+    "replay:check": "tsx scripts/replaycheck.ts",
+    "m3": "tsx scripts/team.ts",
+    "server": "tsx watch server/index.ts",
+    "start": "tsx server/index.ts",
+    "evolve": "tsx scripts/rl/evolve.ts",
+    "rl:evolve": "tsx scripts/rl/evolve.ts",
+    "rl:train": "python3 scripts/rl/train_ppo.py",
+    "rl:selfplay": "python3 scripts/rl/selfplay.py",
+    "rl:export": "python3 scripts/rl/export_sb3.py"
+  },
+  "dependencies": {
+    "@codemirror/lang-javascript": "^6.2.5",
+    "@codemirror/theme-one-dark": "^6.1.3",
+    "codemirror": "^6.0.2",
+    "express": "^5.2.1",
+    "fflate": "^0.8.3",
+    "mysql2": "^3.24.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.5.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tsx": "^4.23.13",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.3"
+  }
+}

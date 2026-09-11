@@ -1,0 +1,32 @@
+# ===== 依赖与构建产物 =====
+node_modules/
+dist/
+
+# ===== 数据库配置（含连接信息，绝不入库）与运行时数据 =====
+server/data/
+
+# ===== 训练产物 / 个人模型（体积大且因人而异，见 README「RL 训练」） =====
+tank-ppo*.zip
+my-tank.json
+scripts/rl/best-model.json
+scripts/rl/sp-opponent.json
+
+# ===== 基准测试：baseline 为提交基准，latest 为每次运行输出 =====
+golden/stress-latest.json
+
+# ===== Python =====
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ===== 环境变量 =====
+.env
+.env.*
+
+# ===== 编辑器 / 系统 =====
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.local
