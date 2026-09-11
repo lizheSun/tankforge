@@ -47,7 +47,7 @@ TANKFORGE 是一个**可编程坦克对战平台**：
 ### 方式一：只玩单机对战（30 秒，零后端依赖）
 
 ```bash
-git clone https://github.com/sunleone/tankforge.git
+git clone https://github.com/lizheSun/tankforge.git
 cd tankforge
 npm install
 npm run dev          # → http://localhost:5173

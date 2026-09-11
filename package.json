@@ -5,7 +5,7 @@
   "type": "module",
   "description": "可编程坦克对战平台：写 JS 策略或训练 RL 模型，在确定性引擎里单挑、组队团战、打天梯赛与吃鸡赛",
   "license": "MIT",
-  "author": "sunleone",
+  "author": "lizheSun",
   "keywords": [
     "tank",
     "game-engine",
@@ -16,13 +16,13 @@
     "typescript",
     "react"
   ],
-  "homepage": "https://github.com/sunleone/tankforge#readme",
+  "homepage": "https://github.com/lizheSun/tankforge#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sunleone/tankforge.git"
+    "url": "git+https://github.com/lizheSun/tankforge.git"
   },
   "bugs": {
-    "url": "https://github.com/sunleone/tankforge/issues"
+    "url": "https://github.com/lizheSun/tankforge/issues"
   },
   "engines": {
     "node": ">=20"
